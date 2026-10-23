@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="radius_card">18dp</dimen>
+    <dimen name="radius_control">14dp</dimen>
+    <dimen name="radius_bar">22dp</dimen>
+    <dimen name="radius_chip">17dp</dimen>
+</resources>
