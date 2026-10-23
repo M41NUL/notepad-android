@@ -1,0 +1,16 @@
+<resources>
+    <color name="note_0">#FFFFFF</color>
+    <color name="note_1">#FF2D55</color>
+    <color name="note_2">#FF9500</color>
+    <color name="note_3">#FFCC00</color>
+    <color name="note_4">#34C759</color>
+    <color name="note_5">#32ADE6</color>
+
+    <color name="glass_fill">#FFFFFFFF</color>
+    <color name="glass_stroke">#FFE5E5EA</color>
+    <color name="splash_bg">#FFFF8A00</color>
+
+    <color name="swipe_bg">#FF3B30</color>
+    <color name="swipe_pin">#FF9500</color>
+    <color name="swipe_restore">#34C759</color>
+</resources>
