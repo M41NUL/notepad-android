@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_glass_pill"
+    android:stateListAnimator="@animator/press_row"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/thumb"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_attach_thumb"
+        android:clipToOutline="true"
+        android:importantForAccessibility="no"
+        android:padding="14dp"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="middle"
+            android:maxLines="1"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/remove"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:stateListAnimator="@animator/press_soft"
+        android:contentDescription="@string/remove"
+        android:src="@drawable/ic_close" />
+</LinearLayout>

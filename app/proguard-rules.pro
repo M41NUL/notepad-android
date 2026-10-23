@@ -1,0 +1,3 @@
+-keepattributes SourceFile,LineNumberTable
+-renamesourcefileattribute SourceFile
+-keepclassmembers enum com.simplenotes.app.** { *; }
