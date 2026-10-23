@@ -1,0 +1,210 @@
+<resources>
+    <style name="Base.AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorControlHighlight">@android:color/transparent</item>
+        <item name="selectableItemBackground">@android:color/transparent</item>
+        <item name="selectableItemBackgroundBorderless">@android:color/transparent</item>
+        <item name="android:selectableItemBackground">@android:color/transparent</item>
+        <item name="android:selectableItemBackgroundBorderless">@android:color/transparent</item>
+        <item name="colorPrimary">#FF8A00</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">#FFE2BD</item>
+        <item name="colorOnPrimaryContainer">#1C1C1E</item>
+        <item name="colorSecondaryContainer">#E5E5EA</item>
+        <item name="colorOnSecondaryContainer">#1C1C1E</item>
+        <item name="colorSurface">#F2F2F7</item>
+        <item name="colorOnSurface">#1C1C1E</item>
+        <item name="colorOnSurfaceVariant">#6C6C70</item>
+        <item name="colorSurfaceVariant">#E5E5EA</item>
+        <item name="colorSurfaceContainerLowest">#FFFFFF</item>
+        <item name="colorSurfaceContainerLow">#F9F9FB</item>
+        <item name="colorSurfaceContainer">#F2F2F7</item>
+        <item name="colorSurfaceContainerHigh">#FFFFFF</item>
+        <item name="colorSurfaceContainerHighest">#E5E5EA</item>
+        <item name="colorOutline">#C7C7CC</item>
+        <item name="colorOutlineVariant">#D1D1D6</item>
+        <item name="colorError">#FF3B30</item>
+        <item name="android:colorBackground">#F2F2F7</item>
+        <item name="android:windowBackground">@drawable/bg_main</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowAnimationStyle">@style/Animation.App.Activity</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.Dialog</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheet</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme" parent="Base.AppTheme" />
+
+    <style name="ThemeOverlay.App.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.App.DialogButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.App.DialogButton</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.App.DialogButton</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@style/Animation.App.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.25</item>
+    </style>
+
+    <style name="Widget.App.DialogButton" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="backgroundTint">@color/btn_press_bg</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.25</item>
+    </style>
+
+    <style name="Theme.App.Draw" parent="AppTheme">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@style/Animation.App.Dialog</item>
+    </style>
+
+    <style name="Animation.App.Dialog" parent="">
+        <item name="android:windowEnterAnimation">@anim/dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out</item>
+    </style>
+
+    <style name="Animation.App.Activity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/screen_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/screen_back_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/screen_back_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/screen_out</item>
+    </style>
+
+    <style name="Theme.App.Snooze" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_bg</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.Pill" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Widget.App.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_bg</item>
+        <item name="android:textColor">@color/chip_text</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipStrokeColor">@color/glass_stroke</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipCornerRadius">@dimen/radius_chip</item>
+    </style>
+
+    <style name="Widget.App.SelAction" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:stateListAnimator">@animator/press_soft</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="Widget.App.AttachBtn" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:stateListAnimator">@animator/press_soft</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:drawableTint">?attr/colorPrimary</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Widget.App.FmtBtn" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:stateListAnimator">@animator/press_soft</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="Widget.App.TbIcon" parent="">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:stateListAnimator">@animator/press_soft</item>
+    </style>
+
+    <style name="Widget.App.TbText" parent="">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:stateListAnimator">@animator/press_soft</item>
+    </style>
+
+    <style name="Accent" />
+
+    <style name="Accent.Blue">
+        <item name="colorPrimary">#007AFF</item>
+        <item name="colorPrimaryContainer">#D6E8FF</item>
+    </style>
+    <style name="Accent.Purple">
+        <item name="colorPrimary">#AF52DE</item>
+        <item name="colorPrimaryContainer">#EBD9F7</item>
+    </style>
+    <style name="Accent.Green">
+        <item name="colorPrimary">#2DB34F</item>
+        <item name="colorPrimaryContainer">#D5F2DD</item>
+    </style>
+    <style name="Accent.Orange">
+        <item name="colorPrimary">#FF8A00</item>
+        <item name="colorPrimaryContainer">#FFE5C2</item>
+    </style>
+    <style name="Accent.Pink">
+        <item name="colorPrimary">#FF2D55</item>
+        <item name="colorPrimaryContainer">#FFD9E1</item>
+    </style>
+    <style name="Accent.Teal">
+        <item name="colorPrimary">#2AA3BC</item>
+        <item name="colorPrimaryContainer">#CFEDF3</item>
+    </style>
+
+    <style name="Widget.App.TbCircle" parent="Widget.App.TbIcon">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:padding">11dp</item>
+        <item name="android:background">@drawable/bg_tb_circle</item>
+        <item name="android:stateListAnimator">@animator/press_soft</item>
+    </style>
+
+    <style name="Widget.App.TbCircleText" parent="Widget.App.TbText">
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:background">@drawable/bg_tb_circle</item>
+    </style>
+
+    <style name="Widget.App.TbPill" parent="Widget.App.TbText">
+        <item name="android:layout_width">52dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:background">@drawable/bg_tb_pill</item>
+    </style>
+</resources>
